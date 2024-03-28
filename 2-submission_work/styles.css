@@ -7,6 +7,7 @@
 }
 body{
     background-color: rgba(0, 0, 0, 0.015);
+    padding-top: 10px;
 }
 .container{
     display: grid;
@@ -16,9 +17,6 @@ body{
     width: 99vw;
     margin: auto;
 }
-main, aside, .info{
-    border: 1px solid black;
-}
 nav, .login-items, main, aside, .info{
     padding: 0 20px;
 }
@@ -27,7 +25,6 @@ nav{
     grid-column: 1;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    width: 85%
 }
 .login-items{
     grid-row: 1;
@@ -39,6 +36,7 @@ nav{
     .login{
         grid-column: 4;
         width: fit-content;
+        margin-right: 20px;
     }
     .register{
         grid-column: 5;
@@ -62,15 +60,29 @@ aside{
 .info{
     grid-row: 3;
     grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 50px 15% 0 12%;
+    padding: 0;
 }
 .nav{
     margin: auto 0;
 }
-.about, .login, .careers, .register{
+.logo{
+    padding-top: 10px;
+    margin: auto;
+    width: fit-content;
+    margin-right: 50px;
+}
+.about, .login, .register, .logo{
     &:hover{
         color: rgba(0, 0, 0, 0.8);
         cursor: pointer;
     }
+}
+.careers:hover{
+    cursor: default;
+    color: rgba(0, 0, 0, 0.8);
 }
 .features-dropdown{
     background-color: white;
@@ -96,6 +108,54 @@ aside{
 .dropdown-svg{
     margin-right: 10px;
 }
+main{
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    height: fit-content;
+}
+header{
+    color: #151515;
+    font-size: 84px;
+    font-weight: 600;
+    line-height: 0.9;
+}
+p{
+    margin-top: 50px;
+    line-height: 21px;
+}
+.learn-more{
+    margin-top: 50px;
+    width: fit-content;
+    color:white;
+    background-color: #151515;
+    border-radius: 10px;
+    padding: 15px 30px;
+    border: 2px solid #151515;
+    &:hover{
+        background-color: transparent;
+        color: #151515;
+        cursor: pointer;
+    }
+}
+.greyed{
+    margin: 0 100px;
+}
+.audiophile{
+    transform: translate(15%, -8px);
+}
+.artwork{
+    height: 80%;
+    display: block;
+    margin: auto;
+}
+aside{
+    width: 90%;
+    height: 100%;
+}
+.artwork{
+    height: 550px;
+}
 
 
 
@@ -119,13 +179,7 @@ aside{
 
 
 
-
-
-
-
-
-
-@media (max-width: 990px){
+@media (max-width: 1040px){
 *{
     display: none;
 }
